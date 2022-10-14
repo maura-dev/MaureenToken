@@ -11,6 +11,11 @@ contract Wallet {
         _;
     }
 
+    // contract events
+    event Sent(uint256 _amount, address _to);
+    event Deposit(uint256 _amount);
+
+
     constructor(){
         //setting deployer as owner 
         owner = msg.sender;
@@ -24,12 +29,14 @@ contract Wallet {
         (bool success, ) = payable(_to).call{value: amount}("Sent successfully");
         require(success == true, "Transaction failed");
         balances[msg.sender] = balances[msg.sender] - amount;
+        emit Sent( amount, _to);
     }
 
     //function to deposit ether into contract
     function depositEth() public payable {
         require(msg.value > 0, "Enter valid amount");
         balances[msg.sender] = balances[msg.sender] + msg.value;
+        emit Deposit(msg.value);
     }
 
     //function to get the eth balance of the contract

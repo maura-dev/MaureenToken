@@ -11,6 +11,38 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Deposit",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "Sent",
+				"type": "event"
+			},
+			{
 				"stateMutability": "payable",
 				"type": "fallback"
 			},
@@ -99,11 +131,11 @@
 	},
 	"sources": {
 		"contracts/Wallet.sol": {
-			"keccak256": "0x2892e2221297e214ab81f74473ddaaa620e005fb168f6ff6722162556c876875",
+			"keccak256": "0xf45e57e2d36320639f5d6beff7c7f5f9c2bf4f35af6d509f057a8627a36d97c0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://af6637d3fcbc77ab91068436df96b374764d00dcc67ef9b9806d9e485b2bb77b",
-				"dweb:/ipfs/QmRCiSK56gPJt1yK5PUDZCLz2VCoAutQmRVoecH1zDTYmn"
+				"bzz-raw://773880509b44cbb79b4ac095235c4727df7e52ce9fb9edbb52235791dff01950",
+				"dweb:/ipfs/QmXtc7uv5MDT8DMmmKgPDUqVDDenihNdDn2HzFdwEwK9hB"
 			]
 		}
 	},
